@@ -1,8 +1,8 @@
 import asyncio
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart, Command
+from config import TOKEN
 
-TOKEN = '8753338258:AAHkpPFzt6uJMJ2DKUF-_jAvMJI_746WIZ4'
 users = {}
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
