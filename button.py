@@ -15,7 +15,7 @@ main.row(
     KeyboardButton(text='Корзина'),
     KeyboardButton(text='Меню')
 )
-
+main = main.as_markup(resize_keyboard=True) 
 # Inline-клавиатура
 menu = InlineKeyboardBuilder()
 
@@ -25,3 +25,4 @@ menu.add(
         callback_data='catalog'
     )
 )
+menu = menu.as_markup()
