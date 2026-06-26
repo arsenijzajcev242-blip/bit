@@ -7,9 +7,9 @@ from aiogram.filters import CommandStart, Command
 router = Router()
 users = {}
 
-@router.message(Command('Star'))
+@router.message(Command('start'))
 async def echo(message: types.Message):
-    await message.answer('Привет,как ты?')
+    await message.answer('Привет,как ты?',reply_markup=menu.as_markup())
 
 @router.message(F.photo)
 async def pgoto(message: types.Message):
