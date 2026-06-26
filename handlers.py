@@ -5,7 +5,7 @@ from aiogram.filters import CommandStart, Command
 
 router = Router()
 users = {}
-
+print("HANDLERS LOADED")
 @router.message(Command('start'))
 print("NEW START HANDLER")
 async def echo(message: types.Message):
