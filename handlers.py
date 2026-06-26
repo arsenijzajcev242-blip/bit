@@ -9,7 +9,7 @@ users = {}
 
 @router.message(CommandStart())
 async def echo(message: types.Message):
-    await message.answer('Привет', reply_markup=menu, resize_keyboard=True)
+    await message.answer('Привет,как ты?', reply_markup=menu, resize_keyboard=True)
 
 @router.message(F.photo)
 async def pgoto(message: types.Message):
