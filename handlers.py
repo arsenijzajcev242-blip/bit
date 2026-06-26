@@ -7,6 +7,7 @@ router = Router()
 users = {}
 
 @router.message(Command('start'))
+print("NEW START HANDLER")
 async def echo(message: types.Message):
     await message.answer('Привет,как ты?',reply_markup=menu.as_markup())
 
