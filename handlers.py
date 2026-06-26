@@ -21,5 +21,5 @@ async def get_photo(message: types.Message):
     if us_id in users:
         await message.answer_photo(photo=users[us_id])
     else:
-        await message.answer('Вы еще не отправляли фото', reply_markup=menu, resize_keyboard=True)
+        await message.answer('Вы еще не отправляли фото', reply_markup=menu)
 
