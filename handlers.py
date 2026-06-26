@@ -7,7 +7,7 @@ from aiogram.filters import CommandStart, Command
 router = Router()
 users = {}
 
-@router.message(CommandStart())
+@router.message(Command('Star'))
 async def echo(message: types.Message):
     await message.answer('Привет,как ты?', reply_markup=menu, resize_keyboard=True)
 
