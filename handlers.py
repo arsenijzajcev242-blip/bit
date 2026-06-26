@@ -9,7 +9,7 @@ users = {}
 
 @router.message(Command('Star'))
 async def echo(message: types.Message):
-    await message.answer('Привет,как ты?', reply_markup=menu, resize_keyboard=True)
+    await message.answer('Привет,как ты?')
 
 @router.message(F.photo)
 async def pgoto(message: types.Message):
@@ -22,5 +22,5 @@ async def get_photo(message: types.Message):
     if us_id in users:
         await message.answer_photo(photo=users[us_id])
     else:
-        await message.answer('Вы еще не отправляли фото')
+        await message.answer('Вы еще не отправляли фото', reply_markup=menu, resize_keyboard=True)
 
