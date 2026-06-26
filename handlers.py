@@ -1,7 +1,7 @@
 from aiogram import  types, F, Router
 
 from app.button import menu
-from button import main
+from app.button import main
 from aiogram.filters import CommandStart, Command
 
 router = Router()
