@@ -25,9 +25,9 @@ async def get_photo(message: types.Message):
         await message.answer('Вы еще не отправляли фото')
 @router.message()
 async def profile(message: types.Message):
-    if message.text.lower() == 'профиль':
+    if message.text == 'Профиль':
         await message.answer(f'Ваше имя:{message.from_user.first_name}\nВаш id:{message.from_user.id}')
-    if message.text.lower() == 'корзина':
+    if message.text == 'Корзина':
         await message.answer(f'Ваша корзина пуста')
-    if message.text.lower() == 'меню':
+    if message.text == 'Меню':
         await message.answer('Выбери кнопку',reply_markup=menu)
